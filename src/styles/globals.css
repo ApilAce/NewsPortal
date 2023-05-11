@@ -5,6 +5,14 @@
 
 :root {
   /* colors */
+  --primary: #036d1e;
+  --secondary: #ff6f00;
+  --accent: #32424c;
+  --primary-hover: #2f4733;
+  --success: #13ce66;
+  --info: #3366ff;
+  --warning: #ffb020;
+  --danger: #ff000d;
 
   /* typography */
 

@@ -6,17 +6,12 @@ export const getServerSideProps = async(context: any) => {
   const categories = await GET_CATEGORIES();
   return {
     props: {
-      data: categories
+      categories: categories
     } 
   }
 }
 
-export default function Dashboard({data}: any) {
-  const [categories, setCategories] = useState<any>([]);
-  useEffect(() => {
-    setCategories(data);
-  }, []);
-
+export default function Dashboard({categories}: any) {
   return (
     <>
       <Layout title="Admin | Dashboard">
@@ -24,7 +19,7 @@ export default function Dashboard({data}: any) {
         {categories.length > 2 ? categories.map((category: any, index: number) => {
           return(
             <>
-              <h1>{category?.name}</h1>
+              <h3 key={index}>{category?.name}</h3>
             </>
           );
         

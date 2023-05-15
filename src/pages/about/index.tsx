@@ -1,5 +1,7 @@
+import WebsiteLayout from "@/components/web/layout";
+
 const About = () => {
-  return <div>About</div>;
+  return <WebsiteLayout>About</WebsiteLayout>;
 };
 
 export default About;

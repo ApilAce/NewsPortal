@@ -1,11 +1,12 @@
+import WebsiteLayout from "@/components/web/layout";
 import Link from "next/link";
 
 const Homepage = () => {
   return (
-    <div>
+    <WebsiteLayout>
       <div>Homepage</div>
       <Link href={"/about/"}>About</Link>
-    </div>
+    </WebsiteLayout>
   );
 };
 

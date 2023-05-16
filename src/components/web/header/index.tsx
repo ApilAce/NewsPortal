@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import styles from "./header.module.css";
 import en from "../../../locales/en/header.json";
 import np from "../../../locales/np/header.json";
+import clsx from "clsx";
+import { useState } from "react";
 
 const languageData = [
   {
@@ -24,8 +26,10 @@ const languageData = [
 const Header = () => {
   const router = useRouter();
   const { locale } = router;
+  const [language, setLanguage] = useState<string>("en");
 
   const handleLanguageChange = (language: string) => {
+    setLanguage(language);
     router.push(router.pathname, router.asPath, { locale: language });
   };
 
@@ -44,15 +48,22 @@ const Header = () => {
             <div className={styles.language}>{t.language}</div>
             <div className={styles.iconContainer}>
               {languageData.map((item) => (
-                <Image
-                  key={item.alt}
-                  src={item.src}
-                  alt={item.alt}
-                  className={styles.image}
-                  width={item.width}
-                  height={item.height}
+                <div
+                  className={clsx(
+                    styles.imageContainer,
+                    language === item.lng ? styles.active : ""
+                  )}
                   onClick={() => handleLanguageChange(item.lng)}
-                ></Image>
+                  key={item.alt}
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    className={styles.image}
+                    width={item.width}
+                    height={item.height}
+                  ></Image>
+                </div>
               ))}
             </div>
           </div>

@@ -47,8 +47,18 @@
   align-items: baseline;
 }
 
-.image:is(:hover, :focus) {
+.imageContainer {
+  padding: 5px 5px;
+}
+
+.imageContainer:is(:hover, :focus) {
   cursor: pointer;
+}
+
+.active {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
+  transition: all 500ms;
 }
 
 @media (min-width: 576px) {

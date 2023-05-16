@@ -1,11 +1,11 @@
-import clsx from "clsx";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import { IoIosCalendar } from "react-icons/io";
+import styles from "./header.module.css";
 import en from "../../../locales/en/header.json";
 import np from "../../../locales/np/header.json";
-import styles from "./header.module.css";
+import clsx from "clsx";
+import { useEffect, useState } from "react";
+import { IoIosCalendar } from "react-icons/io";
 
 const languageData = [
   {

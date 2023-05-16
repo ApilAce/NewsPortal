@@ -11,7 +11,7 @@ const Homepage = () => {
   return (
     <WebsiteLayout>
       <Head>
-        <title>News Portal Homepage</title>
+        <title>News Portal | Homepage</title>
         <meta name="description" content="News Portal Homepage" />
       </Head>
       <div>{t.home}</div>

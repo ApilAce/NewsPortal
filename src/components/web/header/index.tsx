@@ -5,6 +5,7 @@ import en from "../../../locales/en/header.json";
 import np from "../../../locales/np/header.json";
 import clsx from "clsx";
 import { useState } from "react";
+import { IoIosCalendar } from "react-icons/io";
 
 const languageData = [
   {
@@ -40,7 +41,10 @@ const Header = () => {
       <div className="container">
         <header className={styles.header}>
           <div className={styles.newsContainer}>
-            <div className={styles.date}>{t.date}</div>
+            <div className={styles.dateContainer}>
+              <IoIosCalendar className={styles.dateIcon} />
+              <div className={styles.date}>{t.date}</div>
+            </div>
             <div className={styles.category}>{t.trending}</div>
             <div className={styles.news}>{t.news}</div>
           </div>
@@ -68,6 +72,7 @@ const Header = () => {
             </div>
           </div>
         </header>
+        <header className={styles.subHeader}></header>
       </div>
     </div>
   );

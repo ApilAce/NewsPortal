@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "./header";
+import Navbar from "./navbar";
 
 interface LayoutProps {
   title?: string;
@@ -17,6 +18,7 @@ const WebsiteLayout: React.FC<LayoutProps> = ({ children, title }) => {
       </Head>
       <>
         <Header />
+        <Navbar />
         <main>{children}</main>
       </>
     </>

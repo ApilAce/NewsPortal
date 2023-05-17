@@ -17,6 +17,10 @@
   --black: #000;
   --bg-1: #0c2334;
   --black_1: #242424;
+  --black_2: #1c1b1f;
+  --black_3: #353535;
+  --gray: #cacaca;
+  --blue: #0679ab;
 
   --gradient-1: linear-gradient(90deg, #0b2233 0%, #006180 102.81%);
 
@@ -38,7 +42,7 @@
 
   /* transition */
   --transition-1: 0.05s ease;
-  --transition-2: 0.25s ease;
+  --transition-2: 0.5s ease;
   --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
   --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
 }

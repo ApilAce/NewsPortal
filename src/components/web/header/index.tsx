@@ -75,13 +75,13 @@ const Header = () => {
             <div className={styles.newsContainer}>
               <div className={styles.dateContainer}>
                 <IoIosCalendar className={styles.dateIcon} />
-                <div className={styles.date}>{t.date}</div>
+                <div className={styles.date}>{t["date"]}</div>
               </div>
-              <div className={styles.category}>{t.trending}</div>
-              <div className={styles.news}>{t.news}</div>
+              <div className={styles.category}>{t["trending"]}</div>
+              <div className={styles.news}>{t["news"]}</div>
             </div>
             <div className={styles.languageContainer}>
-              <div className={styles.language}>{t.language}</div>
+              <div className={styles.language}>{t["language"]}</div>
 
               <div className={styles.iconContainer}>
                 {languageData.map((item) => (

@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import en from "../../locales/en/common.json";
 import np from "../../locales/np/common.json";
 import Hero from "@/sections/web/hero";
+import Politics from "@/sections/web/politics";
 
 const homeData = {
   leftData: [
@@ -51,8 +52,8 @@ const Homepage = () => {
       </Head>
       <div>
         <Hero homeData={homeData} />
+        <Politics />
       </div>
-      <Link href={"/about/"}>{t.about}</Link>
     </WebsiteLayout>
   );
 };

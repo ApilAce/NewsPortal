@@ -1,0 +1,10 @@
+.container {
+  padding: var(--section-padding) 0;
+}
+
+.firstAds {
+  height: 140px;
+  background-color: #e8e8e8;
+  color: #7c7c7c;
+  text-align: center;
+}

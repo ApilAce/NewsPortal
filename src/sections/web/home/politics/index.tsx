@@ -71,7 +71,7 @@ const Politics = () => {
         </div>
         <div className={styles.cardContainer}>
           {cardData.map((cardItem) => (
-            <Card cardItem={cardItem} />
+            <Card cardItem={cardItem} key={cardItem.title} />
           ))}
         </div>
       </div>

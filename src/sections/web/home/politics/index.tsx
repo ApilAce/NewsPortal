@@ -61,7 +61,7 @@ const cardData = [
   },
 ];
 
-const Politics = () => {
+const Politics = ({articles}: any) => {
   return (
     <div className={styles.container}>
       <div className="container">
@@ -70,8 +70,8 @@ const Politics = () => {
           <h6 className={"section-subtitle"}>Latest Events and News</h6>
         </div>
         <div className={styles.cardContainer}>
-          {cardData.map((cardItem) => (
-            <Card cardItem={cardItem} key={cardItem.title} />
+          {articles.map((cardItem: any, index: number) => (
+            <Card cardItem={cardItem} key={index} />
           ))}
         </div>
       </div>

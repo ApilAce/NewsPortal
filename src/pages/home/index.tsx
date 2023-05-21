@@ -9,7 +9,6 @@ import Politics from "@/sections/web/home/politics";
 import Advertisement from "@/sections/web/home/advertisement";
 import Technology from "@/sections/web/home/technology";
 
-
 const homeData = {
   leftData: [
     {
@@ -44,7 +43,7 @@ const homeData = {
   ],
 };
 
-const Homepage = () => {
+const Homepage = ({articles}: any) => {
   const { locale } = useRouter();
   const t = locale === "np" ? np : en;
   return (
@@ -56,7 +55,7 @@ const Homepage = () => {
       <div>
         <Hero homeData={homeData} />
         <Advertisement/>
-        <Politics />
+        <Politics articles={articles} />
         <Technology />
       </div>
     </WebsiteLayout>

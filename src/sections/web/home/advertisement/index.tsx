@@ -6,7 +6,7 @@ const Advertisement = () => {
     return (
         <div className={styles.container}>
             <div className="container">
-                <div className={styles.firstads}> 
+                <div className={styles.firstAds}> 
                  860* 140 AD
                 </div>
             </div>

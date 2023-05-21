@@ -1,0 +1,12 @@
+.menu {
+  border-inline-end: none !important;
+}
+
+.title {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 28px;
+  margin-bottom: 20px;
+}

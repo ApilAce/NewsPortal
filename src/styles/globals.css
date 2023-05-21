@@ -28,8 +28,8 @@
 
   /* typography */
 
-  --ff-gotu: "Gotu", sans-serif;
-  --ff-poppins: "Poppins", sans-serif;
+  --ff-gotu: "Gotu", sans-serif !important;
+  --ff-poppins: "Poppins", sans-serif !important;
 
   --fw-400: 400;
   --fw-500: 500;
@@ -119,15 +119,9 @@ address {
 
 html {
   font-size: 14px;
-  font-family: var(--ff-gotu);
+  font-family: var(--ff-gotu) !important;
   scroll-behavior: smooth;
 }
-
-/* body {
-  font-size: 1.14rem;
-  background-color: #f2f2f2 !important;
-  color: black;
-} */
 
 /*-----------------------------------*\
   #REUSED STYLE
@@ -235,5 +229,20 @@ html {
   }
 }
 
-@media (min-width: 992px) {
+/* ANT DESIGN */
+
+.ant-sider {
+  border-inline-end: 1px solid rgba(5, 5, 5, 0.06) !important;
+}
+
+.sidebar-container {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.main-ant-wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }

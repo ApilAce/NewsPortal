@@ -7,6 +7,8 @@ import np from "../../locales/np/common.json";
 import Hero from "@/sections/web/home/hero";
 import Politics from "@/sections/web/home/politics";
 import Advertisement from "@/sections/web/home/advertisement";
+import Technology from "@/sections/web/home/technology";
+
 
 const homeData = {
   leftData: [
@@ -55,6 +57,7 @@ const Homepage = () => {
         <Hero homeData={homeData} />
         <Advertisement/>
         <Politics />
+        <Technology />
       </div>
     </WebsiteLayout>
   );

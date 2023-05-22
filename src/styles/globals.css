@@ -228,21 +228,3 @@ html {
     max-width: 1200px;
   }
 }
-
-/* ANT DESIGN */
-
-.ant-sider {
-  border-inline-end: 1px solid rgba(5, 5, 5, 0.06) !important;
-}
-
-.sidebar-container {
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.main-ant-wrapper {
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-}

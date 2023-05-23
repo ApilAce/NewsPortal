@@ -8,6 +8,7 @@ import Hero from "@/sections/web/home/hero";
 import Politics from "@/sections/web/home/politics";
 import Advertisement from "@/sections/web/home/advertisement";
 import Technology from "@/sections/web/home/technology";
+import Healthcare from "@/sections/web/home/healthcare";
 
 const homeData = {
   leftData: [
@@ -56,6 +57,7 @@ const Homepage = ({articles}: any) => {
         <Hero homeData={homeData} />
         <Advertisement/>
         <Politics articles={articles} />
+        <Healthcare/>
         <Technology />
       </div>
     </WebsiteLayout>

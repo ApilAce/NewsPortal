@@ -20,9 +20,15 @@
   gap: 4px;
   align-items: center;
 }
-.category {
+.categoryContainer
+{
+  display: flex;
+  justify-content: start;
+  gap: 6px;
+  align-items: center;
+}
+ .category {
   background-color: var(--info);
-  max-width: fit-content;
   color: var(--white);
   padding: 2px 12px;
   font-size: 10px;
@@ -30,7 +36,10 @@
   height: 18px;
   margin-bottom: 10px;
   font-weight: var(--fw-400);
+
 }
+
+
 
 .title {
   font-weight: var(--fw-600);

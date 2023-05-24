@@ -1,36 +1,36 @@
 import React from "react";
-import styles from "./healthcare.module.css";
 import { IoCalendarOutline } from "react-icons/io5";
- 
+import styles from "./healthcare.module.css";
 
 interface healthDataItemProps {
-  category: string;
+  categories: string[];
   title: string;
   date: string;
 }
+
 const healthData = [
   {
-    category: "Health",
+    categories: [{ category: "News", colour:"var(--info)"}],
     title: "White house and justice Discussed Dept.",
     date: "12 Jan 2023",
   },
   {
-    category: "Health",
+    categories: [{ category: "News", colour:"var(--info)" }, { category: "Health", colour: "var(--success)" }],
     title: "White house and justice Discussed Dept.",
     date: "12 Jan 2023",
   },
   {
-    category: "Health",
+    categories: [{ category: "News", colour:"var(--info)"}],
     title: "White house and justice Discussed Dept.",
     date: "12 Jan 2023",
   },
   {
-    category: "Health",
+    categories: [{ category: "News", colour:"var(--info)" }],
     title: "White house and justice Discussed Dept.",
     date: "12 Jan 2023",
   },
   {
-    category: "Health",
+    categories: [{ category: "News", colour:"var(--info)" }, { category: "Health" , colour:  "var(--success)"}],
     title: "White house and justice Discussed Dept.",
     date: "12 Jan 2023",
   },
@@ -49,9 +49,19 @@ const Health: React.FC<healthDataItemProps> = ({}) => {
           </div>
 
           <div className={styles.healthGrid}>
-            {healthData.map((item: healthDataItemProps) => (
-              <div className={styles.healthContainer}>
-                <div className={styles.category}>{item.category} </div>
+            {healthData.map((item) => (
+              <div className={styles.healthContainer} key={item.title}>
+                <div className={styles.categoryContainer}>
+                  {item.categories.slice(0,2).map((categoryList) => (
+                    <div
+                      className={styles.category}
+                      style={{backgroundColor: categoryList.colour}}
+                      key={categoryList.category}
+                    >
+                      {categoryList.category }
+                    </div>
+                  ))}
+                </div>
                 <h2 className={styles.title}>{item.title}</h2>
                 <div className={styles.dateContainer}>
                   <IoCalendarOutline className={styles.icon} />

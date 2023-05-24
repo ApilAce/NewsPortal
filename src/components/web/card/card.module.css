@@ -62,6 +62,13 @@
   color: var(--black_3);
 }
 
+.description{
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
 @media (min-width: 767px) {
   .imageContainer {
     height: 156px;

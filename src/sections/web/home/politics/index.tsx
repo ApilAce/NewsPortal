@@ -2,66 +2,40 @@ import React from "react";
 import styles from "./politics.module.css";
 import Card from "@/components/web/card";
 
-const cardData = [
-  {
-    date: "Jan 12, 2023",
-    title: "White house and justice Dept. Discussed Mueller Report Before Release",
-    author: "Mr. Rajesh",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto quo ipsam aliquid veniam alias, vitae, officiis reiciendis nostrum iure unde tempore dolorum perspiciatis tempora mollitia eius quaerat iste eaque?",
-    image: "/images/dummy/cricket.png",
-  },
-  {
-    date: "Jan 12, 2023",
-    title: "White house and justice Dept. Discussed Mueller Report Before Release",
-    author: "Mr. Rajesh",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto quo ipsam aliquid veniam alias, vitae, officiis reiciendis nostrum iure unde tempore dolorum perspiciatis tempora mollitia eius quaerat iste eaque?",
-    image: "/images/dummy/cricket.png",
-  },
-  {
-    date: "Jan 12, 2023",
-    title: "White house and justice Dept. Discussed Mueller Report Before Release",
-    author: "Mr. Rajesh",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto quo ipsam aliquid veniam alias, vitae, officiis reiciendis nostrum iure unde tempore dolorum perspiciatis tempora mollitia eius quaerat iste eaque?",
-    image: "/images/dummy/cricket.png",
-  },
-  {
-    date: "Jan 12, 2023",
-    title: "White house and justice Dept. Discussed Mueller Report Before Release",
-    author: "Mr. Rajesh",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto quo ipsam aliquid veniam alias, vitae, officiis reiciendis nostrum iure unde tempore dolorum perspiciatis tempora mollitia eius quaerat iste eaque?",
-    image: "/images/dummy/cricket.png",
-  },
-  {
-    date: "Jan 12, 2023",
-    title: "White house and justice Dept. Discussed Mueller Report Before Release",
-    author: "Mr. Rajesh",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto quo ipsam aliquid veniam alias, vitae, officiis reiciendis nostrum iure unde tempore dolorum perspiciatis tempora mollitia eius quaerat iste eaque?",
-    image: "/images/dummy/cricket.png",
-  },
-  {
-    date: "Jan 12, 2023",
-    title: "White house and justice Dept. Discussed Mueller Report Before Release",
-    author: "Mr. Rajesh",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto quo ipsam aliquid veniam alias, vitae, officiis reiciendis nostrum iure unde tempore dolorum perspiciatis tempora mollitia eius quaerat iste eaque?",
-    image: "/images/dummy/cricket.png",
-  },
-  {
-    date: "Jan 12, 2023",
-    title: "White house and justice Dept. Discussed Mueller Report Before Release",
-    author: "Mr. Rajesh",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto quo ipsam aliquid veniam alias, vitae, officiis reiciendis nostrum iure unde tempore dolorum perspiciatis tempora mollitia eius quaerat iste eaque?",
-    image: "/images/dummy/cricket.png",
-  },
-];
+interface CategoryProps {
+  name: string;
+}
 
-const Politics = ({articles}: any) => {
+interface JournalistProps {
+  id: number;
+  name: string;
+  email: string;
+}
+
+interface CategoryRelationProps {
+  category: CategoryProps;
+}
+
+interface Article {
+  id: number;
+  title: string;
+  body: string;
+  imageUrl: string;
+  createdById: number;
+  createdAt: string;
+  updatedAt: string;
+  journalistId: number;
+  verified: boolean;
+  status: string;
+  categoryRelation: CategoryRelationProps[];
+  journalist: JournalistProps;
+}
+
+interface ArticleProps {
+  articles: Article[];
+}
+
+const Politics: React.FC<ArticleProps> = ({ articles }) => {
   return (
     <div className={styles.container}>
       <div className="container">
@@ -70,8 +44,8 @@ const Politics = ({articles}: any) => {
           <h6 className={"section-subtitle"}>Latest Events and News</h6>
         </div>
         <div className={styles.cardContainer}>
-          {articles.map((cardItem: any, index: number) => (
-            <Card cardItem={cardItem} key={index} />
+          {articles.map((cardItem: Article) => (
+            <Card cardItem={cardItem} key={cardItem.id} />
           ))}
         </div>
       </div>

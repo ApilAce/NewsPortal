@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./card.module.css";
 import Image from "next/image";
 import { IoCalendarOutline, IoPersonCircleOutline } from "react-icons/io5";
+import dateFormatter from "@/helpers/dateFormatter";
 
 interface JournalistProps {
   id: number;
@@ -36,7 +37,7 @@ const Card: React.FC<CardProps> = ({ cardItem }) => {
       <div className={styles.content}>
         <div className={styles.dateContainer}>
           <IoCalendarOutline className={styles.icon} />
-          <div className={styles.date}>{cardItem.updatedAt}</div>
+          <div className={styles.date}>{dateFormatter(cardItem.updatedAt)}</div>
         </div>
         <h2 className={styles.title}>{cardItem.title}</h2>
         <div className={styles.authorContainer}>

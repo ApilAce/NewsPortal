@@ -113,11 +113,6 @@ address {
   outline-offset: 4px;
 }
 
-::selection {
-  background-color: var(--black_98);
-  color: var(--white);
-}
-
 html {
   font-size: 14px;
   font-family: var(--ff-gotu) !important;

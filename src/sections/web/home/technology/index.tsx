@@ -1,7 +1,7 @@
+import clsx from "clsx";
+import Image from "next/image";
 import React from "react";
 import styles from "./technology.module.css";
-import Image from "next/image";
-import clsx from "clsx";
 
 interface TechDataItemProps {
   image: string;
@@ -37,7 +37,7 @@ const Tech: React.FC<TechProps> = ({}) => {
 
           <div className={styles.imageGrid}>
             {techData.map((item: TechDataItemProps) => (
-              <div className={styles.imageContainer}>
+              <div className={styles.imageContainer} key={item.title}>
                 <Image
                   src={item.image}
                   alt={item.title}

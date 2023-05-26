@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import { GET_CATEGORIES, GET_TEST_URL } from "@/helpers/apicalls";
 import AdminLayout from "@/components/admin/layout";
+import { GET_CATEGORIES } from "@/helpers/apicalls";
 
 export const getServerSideProps = async (context: any) => {
   const categories = await GET_CATEGORIES();
@@ -19,7 +18,7 @@ export default function Dashboard({ categories }: any) {
 
         {categories.length > 0
           ? categories.map((category: any, index: number) => {
-              return <h2>{category.name}</h2>;
+              return <h2 key={index}>{category.name}</h2>;
             })
           : "No Categories"}
       </AdminLayout>
